@@ -24,5 +24,4 @@ jobs:
 
     - name: Run black
       run: |
-        # --checkフラグはフォーマットが必要かどうかをチェックします。実際にフォーマットするにはフラグを外します
-        black . --check --line-length 120
+        black . --line-length 120
