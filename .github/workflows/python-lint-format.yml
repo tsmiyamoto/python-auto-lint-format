@@ -2,6 +2,10 @@ name: Python Lint and Format
 
 on: [push, pull_request]
 
+# https://docs.github.com/en/actions/using-jobs/assigning-permissions-to-jobs
+permissions:
+  contents: write
+
 jobs:
   lint-and-format:
     runs-on: ubuntu-latest
