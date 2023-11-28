@@ -1,4 +1,3 @@
-
 def fibonacci(n):
     if n <= 0:
         return []
@@ -12,6 +11,7 @@ def fibonacci(n):
             next_num = fib_sequence[-1] + fib_sequence[-2]
             fib_sequence.append(next_num)
         return fib_sequence
+
 
 # Testing the fibonacci function
 print(fibonacci(10))
