@@ -1,21 +1,18 @@
 
-def test_fibonacci():
-    # Test case 1: n = 0
-    assert fibonacci(0) == 0
+from utils.fibonacci import fibonacci
 
-    # Test case 2: n = 1
-    assert fibonacci(1) == 1
 
-    # Test case 3: n = 2
-    assert fibonacci(2) == 1
+def test_fibonacci_zero():
+    assert fibonacci(0) == []
 
-    # Test case 4: n = 5
-    assert fibonacci(5) == 5
+def test_fibonacci_one():
+    assert fibonacci(1) == [0]
 
-    # Test case 5: n = 10
-    assert fibonacci(10) == 55
+def test_fibonacci_two():
+    assert fibonacci(2) == [0, 1]
 
-    # Add more test cases as needed
+def test_fibonacci_five():
+    assert fibonacci(5) == [0, 1, 1, 2, 3]
 
-test_fibonacci()
-from fibonacci import fibonacci
+def test_fibonacci_ten():
+    assert fibonacci(10) == [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]

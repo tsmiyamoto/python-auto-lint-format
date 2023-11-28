@@ -1,25 +1,22 @@
 
+from utils.fizzbuzz import fizz_buzz  # fizz_buzz関数が含まれるモジュールをインポート
+
+
 def test_fizz_buzz():
-    # Test case 1: n is divisible by 3
-    assert fizz_buzz(9) == "Fizz"
+    assert fizz_buzz(15) == ['1', '2', 'Fizz', '4', 'Buzz', 'Fizz', '7', '8', 'Fizz', 'Buzz', '11', 'Fizz', '13', '14', 'FizzBuzz']
 
-    # Test case 2: n is divisible by 5
-    assert fizz_buzz(10) == "Buzz"
+def test_fizz():
+    result = fizz_buzz(3)
+    assert result == ['1', '2', 'Fizz']
 
-    # Test case 3: n is divisible by both 3 and 5
-    assert fizz_buzz(15) == "FizzBuzz"
+def test_buzz():
+    result = fizz_buzz(5)
+    assert result == ['1', '2', 'Fizz', '4', 'Buzz']
 
-    # Test case 4: n is not divisible by 3 or 5
-    assert fizz_buzz(7) == 7
+def test_fizzbuzz():
+    result = fizz_buzz(15)
+    assert 'FizzBuzz' in result
 
-    # Test case 5: n is 0
-    assert fizz_buzz(0) == "FizzBuzz"
-
-    # Test case 6: n is negative
-    assert fizz_buzz(-6) == "Fizz"
-
-    # Test case 7: n is a float
-    assert fizz_buzz(7.5) == 7.5
-
-test_fizz_buzz()
-from fizzbuzz import fizz_buzz
+def test_length():
+    result = fizz_buzz(20)
+    assert len(result) == 20
